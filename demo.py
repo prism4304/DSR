@@ -35,8 +35,8 @@ from dsr.utils.renderer import Renderer
 from dsr.core import config, constants
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--checkpoint', required=True, help='Path to pretrained checkpoint')
-parser.add_argument('--img', type=str, required=False, help='Path to input image')
+parser.add_argument('--checkpoint', required=False, help='Path to pretrained checkpoint')
+parser.add_argument('--img', type=str, required=False, default= 'avatar30.jpg', help='Path to input image')
 parser.add_argument('--img_folder', type=str, required=False, help='Path to input image folders')
 parser.add_argument('--bbox', type=str, default=None, help='Path to .json file containing bounding box coordinates')
 parser.add_argument('--openpose', type=str, default=None, help='Path to .json containing openpose detections')
